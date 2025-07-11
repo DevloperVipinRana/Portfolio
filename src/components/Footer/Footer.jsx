@@ -26,7 +26,7 @@ const Footer = () => {
 
         <li className='flex items-center gap-2'>
           <CiLinkedin size={20} />
-          <a href="https://www.linkedin.com/in/vipin-rana" target="_blank" rel="noopener noreferrer" className="hover:underline">
+          <a href="https://www.linkedin.com/in/vipin-rana-6478a224a/" target="_blank" rel="noopener noreferrer" className="hover:underline">
             vipin-rana
           </a>
         </li>
