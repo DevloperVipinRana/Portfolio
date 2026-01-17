@@ -42,8 +42,8 @@ const Footer = () => {
       <ul className='text-sm md:text-lg space-y-2'>
         <li className='flex items-center gap-2'>
           <FaInstagram size={20} />
-          <a href="https://www.instagram.com/vipinrana9" target="_blank" rel="noopener noreferrer" className="hover:underline">
-            @vipinrana9
+          <a href="https://www.instagram.com/vpnxrana" target="_blank" rel="noopener noreferrer" className="hover:underline">
+            @vpnxrana
           </a>
         </li>
 
