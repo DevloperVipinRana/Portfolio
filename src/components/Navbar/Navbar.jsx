@@ -59,16 +59,16 @@ const Navbar = () => {
         <ul
           className={`${
             menu ? "block" : "hidden"
-          } mx-24 p-y2 mt-4 font-semibold md:mt-0 px-2 rounded-xl text-center md:static md:mx-0 md:flex gap-6 ${
+          } absolute md:static left-0 right-0 top-full mt-4 md:mt-0 mx-4 md:mx-0 p-4 md:p-0 font-semibold rounded-2xl md:rounded-none text-center md:flex gap-6 transition-all duration-300 ${
             scrolled
-              ? "bg-gray-100 md:bg-transparent"
-              : "bg-black bg-opacity-30 md:bg-transparent"
+              ? "bg-white/95 backdrop-blur-md shadow-xl shadow-purple-500/20 text-gray-800 md:bg-transparent md:backdrop-blur-none md:shadow-none"
+              : "bg-black/80 backdrop-blur-md md:bg-transparent md:backdrop-blur-none text-white"
           }`}
         >
-          <a href="#About">
+          <a href="#About" onClick={() => { openMenu(false); setShowmenu(true); }}>
             <li
-              className={`text-md transition-all duration-300 p-1 md:p-0 ${
-                scrolled ? "hover:text-purple-600" : "hover:text-purple-400"
+              className={`text-md transition-all duration-300 p-2 md:p-0 rounded-lg md:rounded-none md:bg-transparent ${
+                scrolled ? "hover:text-purple-600 hover:bg-purple-50 md:hover:bg-transparent" : "hover:text-purple-400 hover:bg-white/10 md:hover:bg-transparent"
               } ${
                 activeSection === "About"
                   ? scrolled
@@ -80,10 +80,10 @@ const Navbar = () => {
               About
             </li>
           </a>
-          <a href="#Experience">
+          <a href="#Experience" onClick={() => { openMenu(false); setShowmenu(true); }}>
             <li
-              className={`text-md transition-all duration-300 p-1 md:p-0 ${
-                scrolled ? "hover:text-purple-600" : "hover:text-purple-400"
+              className={`text-md transition-all duration-300 p-2 md:p-0 rounded-lg md:rounded-none md:bg-transparent ${
+                scrolled ? "hover:text-purple-600 hover:bg-purple-50 md:hover:bg-transparent" : "hover:text-purple-400 hover:bg-white/10 md:hover:bg-transparent"
               } ${
                 activeSection === "Experience"
                   ? scrolled
@@ -95,10 +95,10 @@ const Navbar = () => {
               Experience
             </li>
           </a>
-          <a href="#Projects">
+          <a href="#Projects" onClick={() => { openMenu(false); setShowmenu(true); }}>
             <li
-              className={`text-md transition-all duration-300 p-1 md:p-0 ${
-                scrolled ? "hover:text-purple-600" : "hover:text-purple-400"
+              className={`text-md transition-all duration-300 p-2 md:p-0 rounded-lg md:rounded-none md:bg-transparent ${
+                scrolled ? "hover:text-purple-600 hover:bg-purple-50 md:hover:bg-transparent" : "hover:text-purple-400 hover:bg-white/10 md:hover:bg-transparent"
               } ${
                 activeSection === "Projects"
                   ? scrolled
@@ -110,10 +110,10 @@ const Navbar = () => {
               Projects
             </li>
           </a>
-          <a href="#Footer">
+          <a href="#Footer" onClick={() => { openMenu(false); setShowmenu(true); }}>
             <li
-              className={`text-md transition-all duration-300 p-1 md:p-0 ${
-                scrolled ? "hover:text-purple-600" : "hover:text-purple-400"
+              className={`text-md transition-all duration-300 p-2 md:p-0 rounded-lg md:rounded-none md:bg-transparent ${
+                scrolled ? "hover:text-purple-600 hover:bg-purple-50 md:hover:bg-transparent" : "hover:text-purple-400 hover:bg-white/10 md:hover:bg-transparent"
               } ${
                 activeSection === "Footer"
                   ? scrolled
@@ -139,29 +139,31 @@ const Navbar = () => {
           </button>
         </a>
 
-        {showMenu ? (
-          <RiMenu2Line
-            size={30}
-            className={`md:hidden absolute right-6 top-6 transition-all duration-300 ${
-              scrolled ? "text-gray-800" : "text-white"
-            }`}
-            onClick={() => {
-              openMenu(!menu);
-              setShowmenu(!showMenu);
-            }}
-          />
-        ) : (
-          <RiCloseLine
-            size={30}
-            className={`md:hidden absolute right-6 top-6 transition-all duration-300 ${
-              scrolled ? "text-gray-800" : "text-white"
-            }`}
-            onClick={() => {
-              openMenu(!menu);
-              setShowmenu(!showMenu);
-            }}
-          />
-        )}
+        <div className="md:hidden">
+          {showMenu ? (
+            <RiMenu2Line
+              size={30}
+              className={`transition-all duration-300 cursor-pointer ${
+                scrolled ? "text-gray-800" : "text-white"
+              }`}
+              onClick={() => {
+                openMenu(!menu);
+                setShowmenu(!showMenu);
+              }}
+            />
+          ) : (
+            <RiCloseLine
+              size={30}
+              className={`transition-all duration-300 cursor-pointer ${
+                scrolled ? "text-gray-800" : "text-white"
+              }`}
+              onClick={() => {
+                openMenu(!menu);
+                setShowmenu(!showMenu);
+              }}
+            />
+          )}
+        </div>
       </div>
     </nav>
   );
