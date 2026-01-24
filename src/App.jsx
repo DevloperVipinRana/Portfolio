@@ -8,14 +8,16 @@ import Projects from "./components/Projects/Projects"
 function App() {
 
   return (
-    <div className="bg-[#171d32] h-auto w-full overflow-hidden">
+    <>
       <Navbar />
-      <Home />
-      <About />
-      <Experience />
-      <Projects />
-      <Footer />
-    </div>
+      <div className="bg-[#171d32] h-auto w-full overflow-x-hidden">
+        <Home />
+        <About />
+        <Experience />
+        <Projects />
+        <Footer />
+      </div>
+    </>
   )
 }
 
