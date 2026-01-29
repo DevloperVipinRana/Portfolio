@@ -28,14 +28,14 @@ const ProjectCard = (props) => {
 
         {/* Buttons */}
         <div className='flex flex-wrap gap-3 pt-2'>
-          <a 
+          {props.link && <a 
             className='flex-1 text-center text-white py-2 px-4 text-sm md:text-base font-semibold rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50 hover:scale-105' 
             href={props.link}
             target="_blank"
             rel="noopener noreferrer"
           >
             Demo
-          </a>
+          </a>}
           <a 
             className='flex-1 text-center text-white py-2 px-4 text-sm md:text-base font-semibold rounded-full border-2 border-purple-500 hover:bg-purple-500/20 transition-all duration-300 hover:scale-105' 
             href={props.github}

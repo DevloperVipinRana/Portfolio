@@ -5,6 +5,7 @@ import empmgtsys from '../../assets/empmgtsys.png'
 import todolist from '../../assets/todolist.png'
 import music from '../../assets/music.png'
 import chatapp from '../../assets/chatapp.png'
+import foodview from '../../assets/food-view.png'
 
 const Projects = () => {
   const videoRef = useRef(null);
@@ -62,9 +63,16 @@ const Projects = () => {
           <ProjectCard 
             title="Music App" 
             main="This is a Spotify like music app. Tech stack used: HTML, CSS, JavaScript" 
-            link=" https://rainbow-pavlova-2fb30c.netlify.app" 
+            link="https://rainbow-pavlova-2fb30c.netlify.app" 
             github="https://github.com/DevloperVipinRana/spotify" 
             img={music} 
+          />
+          <ProjectCard 
+            title="Food View" 
+            main="This is a Reel style food view app. Tech stack used: React.js, CSS, Node.js, MongoDB" 
+            link="" 
+            github="https://github.com/DevloperVipinRana/Food-View" 
+            img={foodview} 
           />
         </div>
       </div>
