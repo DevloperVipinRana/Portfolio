@@ -7,12 +7,56 @@ import music from '../../assets/music.png'
 import chatapp from '../../assets/chatapp.png'
 import foodview from '../../assets/food-view.png'
 
+const projects = [
+  {
+    title: "Syncronus-Real time Chat App",
+    main: "A real time Chat app. Tech stack used: React.js, TailwindCSS, Zustand, Socket.io, Node.js, Express, MongoDB",
+    link: "https://fullstack-chat-app-teal.vercel.app",
+    github: "https://github.com/DevloperVipinRana/fullstack-chat-app",
+    img: chatapp,
+  },
+  {
+    title: "Flavoro-Food Ordering App",
+    main: "This is a food ordering app. Tech stack used: React.js, tailwindCSS",
+    link: "https://flavoro-food-app-tau.vercel.app",
+    github: "https://github.com/DevloperVipinRana/FlavoroFoodApp",
+    img: flavoro,
+  },
+  {
+    title: "Employee Management System",
+    main: "This is a Employee management system App. Tech stack used: React.js, tailwindCSS",
+    link: "https://silly-florentine-125169.netlify.app",
+    github: "https://github.com/DevloperVipinRana/EmployeeManagementSystem",
+    img: empmgtsys,
+  },
+  {
+    title: "Todo List App",
+    main: "This is a Todo List app. Tech stack used: React.js, tailwindCSS",
+    link: "https://todoooolisttt.netlify.app",
+    github: "https://github.com/DevloperVipinRana/TodoList",
+    img: todolist,
+  },
+  {
+    title: "Music App",
+    main: "This is a Spotify like music app. Tech stack used: HTML, CSS, JavaScript",
+    link: "https://rainbow-pavlova-2fb30c.netlify.app",
+    github: "https://github.com/DevloperVipinRana/spotify",
+    img: music,
+  },
+  {
+    title: "Food View",
+    main: "This is a Reel style food view app. Tech stack used: React.js, CSS, Node.js, MongoDB",
+    link: "",
+    github: "https://github.com/DevloperVipinRana/Food-View",
+    img: foodview,
+  },
+];
+
 const Projects = () => {
   const videoRef = useRef(null);
 
   return (
     <div id='Projects' className='relative p-10 md:p-24 text-white overflow-hidden min-h-screen'>
-      {/* Background Video */}
       <video 
         ref={videoRef}
         autoPlay 
@@ -32,48 +76,9 @@ const Projects = () => {
           Projects
         </h1>
         <div className='py-12 px-0 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8'>
-          <ProjectCard 
-            title="Syncronus-Real time Chat App" 
-            main="A real time Chat app. Tech stack used: React.js, TailwindCSS, Zustand, Socket.io, Node.js, Express, MongoDB" 
-            link="https://fullstack-chat-app-teal.vercel.app" 
-            github="https://github.com/DevloperVipinRana/fullstack-chat-app" 
-            img={chatapp} 
-          />
-          <ProjectCard 
-            title="Flavoro-Food Ordering App" 
-            main="This is a food ordering app. Tech stack used: React.js, tailwindCSS" 
-            link="https://flavoro-food-app-tau.vercel.app" 
-            github="https://github.com/DevloperVipinRana/FlavoroFoodApp" 
-            img={flavoro} 
-          />
-          <ProjectCard 
-            title="Employee Management System" 
-            main="This is a Employee management system App. Tech stack used: React.js, tailwindCSS" 
-            link="https://silly-florentine-125169.netlify.app" 
-            github="https://github.com/DevloperVipinRana/EmployeeManagementSystem" 
-            img={empmgtsys} 
-          />
-          <ProjectCard 
-            title="Todo List App" 
-            main="This is a Todo List app. Tech stack used: React.js, tailwindCSS" 
-            link="https://todoooolisttt.netlify.app" 
-            github="https://github.com/DevloperVipinRana/TodoList" 
-            img={todolist} 
-          />
-          <ProjectCard 
-            title="Music App" 
-            main="This is a Spotify like music app. Tech stack used: HTML, CSS, JavaScript" 
-            link="https://rainbow-pavlova-2fb30c.netlify.app" 
-            github="https://github.com/DevloperVipinRana/spotify" 
-            img={music} 
-          />
-          <ProjectCard 
-            title="Food View" 
-            main="This is a Reel style food view app. Tech stack used: React.js, CSS, Node.js, MongoDB" 
-            link="" 
-            github="https://github.com/DevloperVipinRana/Food-View" 
-            img={foodview} 
-          />
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
         </div>
       </div>
     </div>
