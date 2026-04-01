@@ -6,14 +6,29 @@ import todolist from '../../assets/todolist.png'
 import music from '../../assets/music.png'
 import chatapp from '../../assets/chatapp.png'
 import foodview from '../../assets/food-view.png'
+import MoviGo from '../../assets/Movigo.png'
 
 const projects = [
+  {
+    title: "MoviGo - Movie Booking App",
+    main: "A Movie booking app with admin panel. Tech stack used: React.js, TailwindCSS, Node.js, Express, MongoDB, Cloudinary, Stripe.",
+    link: "https://movigo-moviebooking.vercel.app/",
+    github: "https://github.com/DevloperVipinRana/MoviGo",
+    img: MoviGo,
+  },
   {
     title: "Syncronus-Real time Chat App",
     main: "A real time Chat app. Tech stack used: React.js, TailwindCSS, Zustand, Socket.io, Node.js, Express, MongoDB",
     link: "https://fullstack-chat-app-teal.vercel.app",
     github: "https://github.com/DevloperVipinRana/fullstack-chat-app",
     img: chatapp,
+  },
+  {
+    title: "Food View",
+    main: "This is a Reel style food view app. Tech stack used: React.js, CSS, Node.js, MongoDB",
+    link: "https://food-view-beta.vercel.app/",
+    github: "https://github.com/DevloperVipinRana/Food-View",
+    img: foodview,
   },
   {
     title: "Flavoro-Food Ordering App",
@@ -42,13 +57,6 @@ const projects = [
     link: "https://rainbow-pavlova-2fb30c.netlify.app",
     github: "https://github.com/DevloperVipinRana/spotify",
     img: music,
-  },
-  {
-    title: "Food View",
-    main: "This is a Reel style food view app. Tech stack used: React.js, CSS, Node.js, MongoDB",
-    link: "",
-    github: "https://github.com/DevloperVipinRana/Food-View",
-    img: foodview,
   },
 ];
 
