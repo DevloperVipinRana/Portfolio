@@ -74,8 +74,8 @@ const Experience = () => {
   ];
 
   const experiencePoints = [
+    "Completed a 6 month internship, working on real-world projects involving both frontend and backend development.",
     "Full Stack MERN Developer with 1+ year of hands-on experience in building responsive and scalable web applications.",
-    "Completed a 4-month internship, working on real-world projects involving both frontend and backend development.",
     "Strong experience in React.js, JavaScript, HTML, CSS, and Tailwind CSS for building modern and user-friendly interfaces.",
     "Hands-on experience with Node.js, Express.js, MongoDB and PostgreSQL for developing RESTful APIs and backend logic.",
     "Implemented authentication, authorization, CRUD operations, and API integrations.",

@@ -1,4 +1,5 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
+import Lottie from 'lottie-react'
 import ProjectCard from './ProjectCard'
 import flavoro from '../../assets/flavoro.png'
 import empmgtsys from '../../assets/empmgtsys.png'
@@ -7,6 +8,9 @@ import music from '../../assets/music.png'
 import chatapp from '../../assets/chatapp.png'
 import foodview from '../../assets/food-view.png'
 import MoviGo from '../../assets/Movigo.png'
+
+// Simple floating particles / tech background animation from LottieFiles (free)
+import bgAnimation from '../../../public/projects.json'
 
 const projects = [
   {
@@ -61,24 +65,24 @@ const projects = [
 ];
 
 const Projects = () => {
-  const videoRef = useRef(null);
-
   return (
-    <div id='Projects' className='relative p-10 md:p-24 text-white overflow-hidden min-h-screen'>
-      <video 
-        ref={videoRef}
-        autoPlay 
-        muted 
-        loop 
-        playsInline
-        preload="auto"
-        className='absolute inset-0 w-full h-full object-cover opacity-20'
-        style={{ zIndex: 0 }}
-      >
-        <source src="/projects2.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <div id='Projects' className='relative p-10 md:p-24 text-white min-h-screen overflow-hidden'>
+      
+      {/* Lottie Background Animation */}
+      <div className='absolute inset-0 w-full h-full' style={{ zIndex: 0 }}>
+        <Lottie
+          animationData={bgAnimation}
+          loop={true}
+          autoplay={true}
+          style={{
+            width: '100%',
+            height: '100%',
+            opacity: 0.15,
+          }}
+        />
+      </div>
 
+      {/* Foreground Content */}
       <div className='relative' style={{ zIndex: 1 }}>
         <h1 className='text-3xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
           Projects
@@ -89,8 +93,10 @@ const Projects = () => {
           ))}
         </div>
       </div>
+
     </div>
   )
 }
 
 export default Projects
+
