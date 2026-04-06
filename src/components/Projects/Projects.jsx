@@ -7,9 +7,7 @@ import todolist from '../../assets/todolist.png'
 import music from '../../assets/music.png'
 import chatapp from '../../assets/chatapp.png'
 import foodview from '../../assets/food-view.png'
-import MoviGo from '../../assets/Movigo.png'
-
-// Simple floating particles / tech background animation from LottieFiles (free)
+import MoviGo from '../../assets/Movigo2.png'
 import bgAnimation from '../../../public/projects.json'
 
 const projects = [
@@ -99,4 +97,3 @@ const Projects = () => {
 }
 
 export default Projects
-
