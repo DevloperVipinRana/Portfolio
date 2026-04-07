@@ -97,8 +97,8 @@ const Experience = () => {
         </div>
       )}
 
-      <div className="relative" style={{ zIndex: 1 }}>
-        <h1 className="text-3xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+      <div className="relative w-full" style={{ zIndex: 1 }}>
+        <h1 className="inline-block text-3xl md:text-5xl font-bold mb-12 px-3 py-1 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Experience
         </h1>
         <div className="flex flex-col md:flex-row items-center justify-between gap-2">
