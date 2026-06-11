@@ -45,7 +45,7 @@ const Home = () => {
               Contact Me
             </button>
           </a>
-          <a href="/VipinResume.pdf" download>
+          <a href="/VipinRana.pdf" download>
             <button className="mt-2 md:mt-10 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-4 py-2 text-sm md:text-base md:px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50 hover:scale-105 cursor-pointer">
               Download Resume
             </button>
